@@ -74,7 +74,7 @@ const ContactPage = () => {
 
           {/* Contact Info Cards - One Row */}
           <Grid container spacing={3} className="mb-12 w-full m-0">
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <ContactInfoCard
                 icon={<EmailIcon className="text-blue-500" />}
                 title="Email"
@@ -82,7 +82,7 @@ const ContactPage = () => {
                 subtitle="Bizga xat yozing"
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <ContactInfoCard
                 icon={<PhoneIcon className="text-blue-500" />}
                 title="Telefon"
@@ -90,7 +90,7 @@ const ContactPage = () => {
                 subtitle="Dush-Shan, 9:00 - 18:00"
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <ContactInfoCard
                 icon={<LocationOnIcon className="text-blue-500" />}
                 title="Manzil"
@@ -98,7 +98,7 @@ const ContactPage = () => {
                 subtitle="Bizning ofisimiz"
               />
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <ContactInfoCard
                 icon={<InstagramIcon className='text-blue-500' />}
                 title="Instagram"
@@ -107,7 +107,7 @@ const ContactPage = () => {
               />
             </Grid>
             {/* telegram */}
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
               <ContactInfoCard
                 icon={<TelegramIcon className='text-blue-500' />}
                 title="Telegram"
@@ -125,7 +125,7 @@ const ContactPage = () => {
 
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <Grid container spacing={3}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <StyledTextField
                     fullWidth
                     label="Ismingiz"
@@ -137,7 +137,7 @@ const ContactPage = () => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <StyledTextField
                     fullWidth
                     label="Email manzilingiz"
@@ -149,7 +149,7 @@ const ContactPage = () => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <StyledTextField
                     fullWidth
                     label="Mavzu"
@@ -161,7 +161,7 @@ const ContactPage = () => {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <StyledTextField
                     fullWidth
                     label="Xabaringiz"
