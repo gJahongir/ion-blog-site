@@ -1,0 +1,8 @@
+export { default as Navbar } from './navbar/navbar'
+export { default as Footer } from './footer/footer'
+export { default as Hero } from './hero/hero'
+export {default as Corusel} from './corusel'
+export { default as ProjectCard } from './projects/ProjectCard'
+export { default as ProjectFilters } from './projects/ProjectFilters'
+export { default as ProjectSidebar } from './projects/ProjectSidebar'
+export { default as MainPagePosts } from './mainPageposts'

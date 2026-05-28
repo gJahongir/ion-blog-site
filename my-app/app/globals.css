@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  --border: #e5e7eb;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f9fafb;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Maxsus klasslar */
+.theme-bg {
+  background-color: var(--background);
+}
+
+.theme-border {
+  border-color: var(--border);
+}
+
+/* Glassmorphism */
+.glass {
+  @apply backdrop-blur-md border transition-all duration-300;
+}
+
+.dark .glass {
+  @apply bg-black/40 border-white/10;
+}
+
+.light .glass {
+  @apply bg-white/60 border-black/5 shadow-sm;
+}

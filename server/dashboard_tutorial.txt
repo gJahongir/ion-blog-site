@@ -1,0 +1,40 @@
+=========================================
+     DASHBOARD VA BACKEND QO'LLANMASI
+=========================================
+
+Ushbu hujjatda loyihangizning dashboard qismi qanday ishlashi va 
+bekkent bilan qanday bog'langani tushuntiriladi.
+
+1. TIZIM QANDAY ISHLAYDI?
+-------------------------
+Hozirgi tizim quyidagi 3 ta asosiy qismdan iborat:
+a) Backend (Server): Ma'lumotlarni MongoDB bazasida saqlaydi.
+b) Zustand Store (Frontend): Bekkentdan kelgan ma'lumotlarni brauzerda boshqaradi.
+c) Dashboard Pages: Store orqali ma'lumotlarni jadval ko'rinishida chiqaradi.
+
+2. ASOSIY FAYLLAR VA ULARNING VAZIFASI
+---------------------------------------
+● server/index.js: Serverning "yuragi". U MongoDB ga ulanadi va API larni yoqadi.
+● server/routes/: Bu yerda API manzillari (GET, POST, DELETE) yozilgan.
+● app/config/constant.ts: Bekkent bilan bog'lanish uchun 'axiosIns' obyekti shu yerda yaratilgan.
+● app/store/useBlogStore.ts: Markaziy "xotira". Ma'lumotlarni bekkentdan olib keladi va saqlaydi.
+
+3. YANGI MA'LUMOT QO'SHISH (POST)
+---------------------------------
+Foydalanuvchi "Chop etish" tugmasini bosganda:
+1. Sahifadagi ma'lumotlar yig'iladi.
+2. Zustand store'dagi 'addPost' yoki 'addProject' funksiyasi chaqiriladi.
+3. Funksiya axios orqali bekkentga (POST /api/posts) so'rov yuboradi.
+4. Bekkent ma'lumotni bazaga saqlaydi va javob qaytaradi.
+5. Store o'z xotirasini yangilaydi va jadvalda yangi ma'lumot paydo bo'ladi.
+
+4. MUHIM MASLAHATLAR
+--------------------
+- Server har doim ishlab turishi kerak (npm run dev).
+- Rasm yuklaganda, hozircha rasmning URL manzilini kiriting.
+- Agar biror narsa ishlamasa, brauzer konsolini (F12 -> Console) tekshiring.
+
+5. KEYINGI QADAMLAR
+-------------------
+- Dashboard dagi barcha sahifalarni real API ga ulaymiz.
+- Statistika qismini (Overview) dinamik qilamiz.

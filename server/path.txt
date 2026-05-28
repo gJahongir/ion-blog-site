@@ -1,0 +1,55 @@
+=========================================
+      BLOG API YO'NALISHLARI (PATHS)
+=========================================
+
+Asosiy URL: http://localhost:5000
+
+-----------------------------------------
+1. LOYIHALAR (PROJECTS) API
+-----------------------------------------
+
+● GET /api/projects
+  - Tavsif: Hamma loyihalarni olish.
+  - Body: Kerak emas.
+
+● POST /api/projects
+  - Tavsif: Yangi loyiha qo'shish.
+  - JSON format:
+    {
+      "name": "Zamonaviy Xonadon",
+      "category": "Interyer",
+      "description": "Loyiha haqida batafsil ma'lumot...",
+      "image": "https://image-link.com/photo.jpg",
+      "status": "Published" // Yoki "Draft"
+    }
+
+● DELETE /api/projects/:id
+  - Tavsif: Loyihani ID si bo'yicha o'chirish.
+  - Manzil misoli: /api/projects/64f123abc456...
+
+-----------------------------------------
+2. MAQOLALAR (POSTS) API
+-----------------------------------------
+
+● GET /api/posts
+  - Tavsif: Barcha maqolalarni olish.
+  - Body: Kerak emas.
+
+● POST /api/posts
+  - Tavsif: Yangi maqola yaratish.
+  - JSON format:
+    {
+      "title": "AI ning kelajagi",
+      "category": "Texnologiya",
+      "content": "Maqola matni bu yerda bo'ladi...",
+      "image": "https://image-link.com/blog.jpg"
+    }
+
+● DELETE /api/posts/:id
+  - Tavsif: Maqolani ID si bo'yicha o'chirish.
+  - Manzil misoli: /api/posts/64f789def012...
+
+-----------------------------------------
+ESLATMALAR:
+- Har bir so'rovda 'Content-Type: application/json' headeri bo'lishi shart.
+- Rasm yuklash hozircha faqat URL (havola) ko'rinishida amalga oshiriladi.
