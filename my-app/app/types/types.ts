@@ -4,7 +4,7 @@ export interface Project {
   name: string;
   category: string;
   description: string;
-  image: string;
+  image?: string;
   path?: string;
   status?: string;
   dateCreated?: string;
@@ -17,7 +17,7 @@ export interface Post {
   title: string;
   category: string;
   content: string;
-  image: string;
+  image?: string;
   views: number;
   publishDate: string;
 }
