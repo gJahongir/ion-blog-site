@@ -1,10 +1,10 @@
 import ProjectDetail from './ProjectDetail'
-import axiosIns from '../../config/constant'
 
 export async function generateStaticParams() {
   try {
-    const res = await axiosIns.get('https://ion-blog-site.onrender.com/api/posts')
-    return res.data.map((project: any) => ({
+    const res = await fetch('https://ion-blog-site.onrender.com/api/projects')
+    const projects = await res.json()
+    return projects.map((project: any) => ({
       id: String(project._id || project.id),
     }))
   } catch {
