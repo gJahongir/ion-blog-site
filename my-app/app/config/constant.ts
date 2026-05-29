@@ -1,12 +1,11 @@
 import axios from "axios";
 
-const url: string = 'http://localhost:3000'
+const url: string = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 export const navItems = [
     {routes : url + '/',label : 'Home',},
     {routes : url + '/projects',label : 'Projects',},
     {routes : url + '/about',label : 'About Dev',},
     {routes : url + '/contact',label : 'Contact',},
-    // {routes : url + '/login',label : 'Login',},
 ];
 
 export const corusel = [
@@ -41,8 +40,8 @@ export const homePageAbout = {
 }
 
 const axiosIns = axios.create({
-    baseURL : "http://localhost:5000/api",
-    timeout : 5000,
+    baseURL : process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api",
+    timeout : 10000,
     headers : {
         "Content-Type" : "application/json",
     }

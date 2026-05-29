@@ -21,7 +21,14 @@ const app = express();
 /**
  * Middleware sozlamalari
  */
-app.use(cors()); // CORS ni ruxsat berish (hamma domenlar uchun)
+// CORS sozlamalari — Frontend URL ruxsat beriladi
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
   next();
@@ -62,6 +69,6 @@ const PORT = process.env.PORT || 5000;
 /**
  * Serverni ishga tushirish
  */
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server ${PORT}-portda ishga tushdi`);
 });
