@@ -3,7 +3,7 @@ import axiosIns from '../../config/constant'
 
 export async function generateStaticParams() {
   try {
-    const res = await axiosIns.get('/projects')
+    const res = await axiosIns.get('https://ion-blog-site.onrender.com/api/posts')
     return res.data.map((project: any) => ({
       id: String(project._id || project.id),
     }))
