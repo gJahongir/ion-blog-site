@@ -1,3 +1,4 @@
+
 import ProjectDetail from './ProjectDetail'
 
 export async function generateStaticParams() {
